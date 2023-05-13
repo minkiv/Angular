@@ -1,0 +1,40 @@
+<div class="container">
+  <!-- <div class="card" style="width: 18rem">
+    <img
+      src="https://res.cloudinary.com/dfj3obru8/image/upload/v1681217128/WE17309/ribpztj5zua32yqkhkyi.png"
+      class="card-img-top"
+    />
+    <div class="card-body">
+      <h5 class="card-title">Name: {{ user.name }}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Mã sv: {{ user.maSV }}</h6>
+      <p class="card-text">Giới tính: {{ user.gender }}</p>
+      <p>Tuổi: {{ user.age }}</p>
+      <div>Lớp: {{ title }}</div>
+      <a href="#" class="btn btn-primary">Card button</a>
+    </div>
+  </div> -->
+  <h1>Products List</h1>
+  <button class="btn-primary">Add Product</button>
+  <div class="container mx-auto mt-4">
+    <div class="row">
+      <div class="col-md-4" *ngFor="let item of products">
+        <div class="card" style="width: 18rem">
+          <a href="/detail/{{ item.id }}"
+            ><img src="{{ item.image }}" class="card-img-top" alt="..."
+          /></a>
+
+          <div class="card-body">
+            <h5 class="card-title">{{ item.name }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{ item.price }}đ</h6>
+            <p>{{ item.quantity }}</p>
+            <p class="card-text">
+              {{ item.description }}
+            </p>
+            <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Update</a>
+            <a href="#" class="btn"><i class="fab fa-github"></i> Delete</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
