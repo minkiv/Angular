@@ -11,6 +11,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { DetailComponent } from './pages/detail/detail.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { DetailComponent } from './pages/detail/detail.component';
     LoginComponent,
     RegisterComponent,
     DetailComponent,
+    ContactComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
