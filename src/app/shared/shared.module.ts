@@ -19,16 +19,16 @@ import { ParentRemoveDirective } from './element/parent-remove.directive';
 // import {PERFECT_SCROLLBAR_CONFIG, PerfectScrollbarConfigInterface, PerfectScrollbarModule} from 'ngx-perfect-scrollbar';
 // import {ClickOutsideModule} from 'ng-click-outside';
 
-const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
-  suppressScrollX: true,
-};
+// const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
+//   suppressScrollX: true,
+// };
 
 @NgModule({
   imports: [
     CommonModule,
-    PerfectScrollbarModule,
-    ClickOutsideModule,
-    NgbModule,
+    // PerfectScrollbarModule,
+    // ClickOutsideModule,
+    // NgbModule,
   ],
   declarations: [
     AccordionAnchorDirective,
@@ -57,16 +57,16 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     ModalBasicComponent,
     DataFilterPipe,
     ParentRemoveDirective,
-    NgbModule,
-    PerfectScrollbarModule,
-    ClickOutsideModule,
+    // NgbModule,
+    // PerfectScrollbarModule,
+    // ClickOutsideModule,
   ],
   providers: [
-    MenuItems,
-    {
-      provide: PERFECT_SCROLLBAR_CONFIG,
-      useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG,
-    },
+    // MenuItems,
+    // {
+    //   // provide: PERFECT_SCROLLBAR_CONFIG,
+    //   useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG,
+    // },
   ],
   schemas: [NO_ERRORS_SCHEMA],
 })
