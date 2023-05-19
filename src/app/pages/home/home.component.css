@@ -1,4 +1,5 @@
-header {
+header,
+.newsletter {
   background-image: linear-gradient(#654ea3, #eaafc8) !important;
 }
 figure {
@@ -40,5 +41,8 @@ figure:hover img {
 }
 .category {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.nam {
+  height: 350px;
 }
