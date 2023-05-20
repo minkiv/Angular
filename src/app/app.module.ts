@@ -11,6 +11,8 @@ import { AboutComponent } from './pages/about/about.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { DetailComponent } from './pages/detail/detail.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { ContactComponent } from './pages/contact/contact.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ClientLayoutComponent } from './layouts/client-layout/client-layout.component';
@@ -33,13 +35,15 @@ import { ProductsComponent } from './pages/products/products.component';
     AdminlayoutComponent,
     ProductsComponent,
   ],
-  imports: [
-    BrowserModule,
+
+  imports: [BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSlideToggleModule,
-  ],
+    FormsModule,
+    HttpClientModule],
+
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
