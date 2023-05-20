@@ -84,33 +84,71 @@
         />
         <figcaption># Dày dép</figcaption>
       </figure>
+      <figure style="--c: #fff5">
+        <img
+          class="nam"
+          src="https://cmsv2.yame.vn/uploads/9aff07e4-1bc8-4f51-84f5-94b28a2e5867/Banner_web_(990x1260)_01.jpg?quality=80&w=0&h=0"
+          alt="Mountains"
+        />
+        <figcaption># Nam</figcaption>
+      </figure>
     </div>
   </div>
 </section>
 <!-- Testimonial section-->
 <div class="py-5 bg-light">
+  <h2 class="text-center">Bộ sưu tập mới nhất</h2>
   <div class="container px-5 my-5">
-    <div class="row gx-5 justify-content-center">
-      <div class="col-lg-10 col-xl-7">
-        <div class="text-center">
-          <div class="fs-4 mb-4 fst-italic">
-            "Working with Start Bootstrap templates has saved me tons of
-            development time when building new projects! Starting with a
-            Bootstrap template just makes things easier!"
-          </div>
-          <div class="d-flex align-items-center justify-content-center">
-            <img
-              class="rounded-circle me-3"
-              src="https://dummyimage.com/40x40/ced4da/6c757d"
-              alt="..."
-            />
-            <div class="fw-bold">
-              Tom Ato
-              <span class="fw-bold text-primary mx-1">/</span>
-              CEO, Pomodoro
-            </div>
-          </div>
-        </div>
+    <div class="row gx-5 align-items-center">
+      <div class="col-lg-4">
+        <img
+          class="img-fluid rounded mb-5 mb-lg-0"
+          src="https://cmsv2.yame.vn/uploads/6089639a-dd46-44bd-b3ab-06e4a1fb3e2b/Banner_web_(990x1260)_05.jpg?quality=80&w=0&h=0"
+          alt="..."
+        />
+      </div>
+      <div class="col-lg-8">
+        <h2 class="display-4">NGÂN HÀ</h2>
+        <p class="lead">
+          Mang bạn đến một vũ trụ bất tận, Gu ngân hà mang đến những thiết kế
+          trẻ trung và xu hướng. Bạn say mê những xu hướng thời trang Steetwear
+          biến tấu không ngừng, hãy chọn Gu Ngân Hà, sẽ mang đến cho bạn đầy đủ
+          các loại trang phục giúp bạn thể hiện cá tính.
+        </p>
+        <a
+          role="button"
+          href="#"
+          class="btn btn-outline-dark"
+          style="line-height: 30px"
+          >MUA NGAY BÂY GIỜ</a
+        >
+      </div>
+    </div>
+  </div>
+  <div class="container px-5 my-5">
+    <div class="row gx-5 align-items-center">
+      <div class="col-lg-8">
+        <h2 class="display-4">ABROAD TRAVEL</h2>
+        <p class="lead">
+          Phong cách thời trang ấn tượng và thu hút dành cho các chuyến du lịch
+          quốc tế đầy cảm hứng. Những gốc chụp đỉnh cao tại sân bay quốc tết TÂN
+          SƠN NHẤT. Bạn đã khám phá chưa?
+        </p>
+        <a
+          role="button"
+          href="#"
+          class="btn btn-outline-dark"
+          style="line-height: 30px"
+          >MUA NGAY BÂY GIỜ</a
+        >
+      </div>
+
+      <div class="col-lg-4">
+        <img
+          class="img-fluid rounded mb-5 mb-lg-0"
+          src="https://cmsv2.yame.vn/uploads/0742aee8-828e-4363-b6ae-6d8b59cc7e59/SB-4.jpg?quality=80&w=0&h=0"
+          alt="..."
+        />
       </div>
     </div>
   </div>
@@ -139,7 +177,7 @@
             </div>
             <a
               class="text-decoration-none link-dark stretched-link"
-              href="detail/{{ item.id }}"
+              href="details/{{ item.id }}"
               ><h5 class="card-title mb-3">{{ item.name }}</h5></a
             >
             <p><b>Giá: </b> {{ item.price }} đ</p>
@@ -168,7 +206,7 @@
       </div>
     </div>
     <!-- Call to action-->
-    <aside class="bg-primary bg-gradient rounded-3 p-4 p-sm-5 mt-5">
+    <aside class="newsletter bg-gradient rounded-3 p-4 p-sm-5 mt-5">
       <div
         class="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start"
       >

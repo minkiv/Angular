@@ -1,0 +1,14 @@
+.logo {
+  overflow: hidden;
+  height: 50px;
+}
+.logo img {
+  margin-top: -28px;
+  width: 108px;
+}
+.user {
+  margin-left: 30px;
+}
+.nav-item {
+  padding: 0 5px;
+}
