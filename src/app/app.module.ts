@@ -11,7 +11,10 @@ import { AboutComponent } from './pages/about/about.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { DetailComponent } from './pages/detail/detail.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,8 +27,13 @@ import { DetailComponent } from './pages/detail/detail.component';
     RegisterComponent,
     DetailComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatSlideToggleModule,
+    FormsModule,
+    HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
