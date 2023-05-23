@@ -18,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ClientLayoutComponent } from './layouts/client-layout/client-layout.component';
 import { AdminlayoutComponent } from './layouts/adminlayout/adminlayout.component';
 import { ProductsComponent } from './pages/products/products.component';
+import { CardComponent } from './pages/card/card.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { ProductsComponent } from './pages/products/products.component';
     ClientLayoutComponent,
     AdminlayoutComponent,
     ProductsComponent,
+    CardComponent,
   ],
 
   imports: [BrowserModule,

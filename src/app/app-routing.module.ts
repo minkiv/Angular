@@ -9,6 +9,7 @@ import { DetailComponent } from './pages/detail/detail.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ClientLayoutComponent } from './layouts/client-layout/client-layout.component';
 import { ProductsComponent } from './pages/products/products.component';
+import { CardComponent } from './pages/card/card.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,8 @@ const routes: Routes = [
       { path: 'about', component: AboutComponent },
       { path: 'contact', component: ContactComponent },
       { path: 'products', component: ProductsComponent },
+      { path: 'card', component: CardComponent },
+
     ],
   },
 
@@ -33,4 +36,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
