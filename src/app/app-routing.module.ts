@@ -23,7 +23,48 @@ const routes: Routes = [
       { path: 'products', component: ProductsComponent },
     ],
   },
-
+  // {
+  //   path: 'admin',
+  //   component: AdminComponent,
+  //   children: [
+  //     {
+  //       path: 'admin',
+  //       redirectTo: 'dashboard',
+  //       pathMatch: 'full'
+  //     }, {
+  //       path: 'dashboard',
+  //       loadChildren: () => import('./pages/dashboard/dashboard-default/dashboard-default.module').then(m => m.DashboardDefaultModule)
+  //     }, {
+  //       path: 'basic',
+  //       loadChildren: () => import('./pages/ui-elements/basic/basic.module').then(m => m.BasicModule)
+  //     }, {
+  //       path: 'notifications',
+  //       loadChildren: () => import('./pages/ui-elements/advance/notifications/notifications.module').then(m => m.NotificationsModule)
+  //     }, {
+  //       path: 'bootstrap-table',
+  //       loadChildren: () => import('./pages/ui-elements/tables/bootstrap-table/basic-bootstrap/basic-bootstrap.module').then(m => m.BasicBootstrapModule),
+  //     }, {
+  //       path: 'map',
+  //       loadChildren: () => import('./pages/map/google-map/google-map.module').then(m => m.GoogleMapModule),
+  //     }, {
+  //       path: 'user',
+  //       loadChildren: () => import('./pages/user/profile/profile.module').then(m => m.ProfileModule)
+  //     }, {
+  //       path: 'simple-page',
+  //       loadChildren: () => import('./pages/simple-page/simple-page.module').then(m => m.SimplePageModule)
+  //     }
+  //   ]
+  // },
+  // {
+  //   path: '',
+  //   component: AuthComponent,
+  //   children: [
+  //     {
+  //       path: 'authentication',
+  //       loadChildren: () => import('./pages/auth/auth.module').then(m => m.AuthModule)
+  //     }
+  //   ]
+  // },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: '**', component: NotFoundPageComponent },
