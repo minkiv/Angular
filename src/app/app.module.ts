@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -11,10 +11,14 @@ import { AboutComponent } from './pages/about/about.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { DetailComponent } from './pages/detail/detail.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { ContactComponent } from './pages/contact/contact.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ClientLayoutComponent } from './layouts/client-layout/client-layout.component';
+import { AdminlayoutComponent } from './layouts/adminlayout/adminlayout.component';
+import { ProductsComponent } from './pages/products/products.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,13 +30,19 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     LoginComponent,
     RegisterComponent,
     DetailComponent,
+    ContactComponent,
+    ClientLayoutComponent,
+    AdminlayoutComponent,
+    ProductsComponent,
   ],
+
   imports: [BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSlideToggleModule,
     FormsModule,
     HttpClientModule],
+
   providers: [],
   bootstrap: [AppComponent],
 })
