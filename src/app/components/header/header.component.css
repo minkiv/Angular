@@ -1,0 +1,21 @@
+.logo {
+  overflow: hidden;
+  height: 50px;
+}
+.logo img {
+  margin-top: -28px;
+  width: 108px;
+}
+.user {
+  margin-left: 30px;
+}
+.nav-item {
+  padding: 0 5px;
+}
+.navbar {
+  position: fixed !important;
+  width: 100%;
+  top: 0;
+  box-shadow: 0 0 15px gray;
+  z-index: 100;
+}
