@@ -16,9 +16,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { ContactComponent } from './pages/contact/contact.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ClientLayoutComponent } from './layouts/client-layout/client-layout.component';
-import { AdminlayoutComponent } from './layouts/adminlayout/adminlayout.component';
 import { ProductsComponent } from './pages/products/products.component';
+
 import { CardComponent } from './pages/card/card.component';
+
+import { AdminComponent } from './layouts/admin/admin.component';
+
 
 @NgModule({
   declarations: [
@@ -33,19 +36,24 @@ import { CardComponent } from './pages/card/card.component';
     DetailComponent,
     ContactComponent,
     ClientLayoutComponent,
-    AdminlayoutComponent,
     ProductsComponent,
+
     CardComponent,
+
+    AdminComponent,
+
   ],
 
-  imports: [BrowserModule,
+  imports: [
+    BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSlideToggleModule,
     FormsModule,
-    HttpClientModule],
+    HttpClientModule,
+  ],
 
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
