@@ -17,8 +17,11 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ClientLayoutComponent } from './layouts/client-layout/client-layout.component';
 import { ProductsComponent } from './pages/products/products.component';
+
+import { CardComponent } from './pages/card/card.component';
+
 import { AdminComponent } from './layouts/admin/admin.component';
-// import { AdminComponent } from './layouts/admin/admin.component';
+
 
 @NgModule({
   declarations: [
@@ -34,8 +37,11 @@ import { AdminComponent } from './layouts/admin/admin.component';
     ContactComponent,
     ClientLayoutComponent,
     ProductsComponent,
+
+    CardComponent,
+
     AdminComponent,
-    // AdminComponent,
+
   ],
 
   imports: [
