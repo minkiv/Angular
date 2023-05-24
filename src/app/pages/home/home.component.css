@@ -39,9 +39,12 @@ figure:hover img {
     color: #fff;
   }
 }
-.category {
+/* .category {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+} */
+.category a {
+  text-decoration: none;
 }
 .nam {
   height: 350px;

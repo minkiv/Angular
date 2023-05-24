@@ -1,4 +1,4 @@
-<header class="bg-dark py-5">
+<header class="bg-dark py-5 mt-5">
   <div class="container px-5">
     <div class="row gx-5 align-items-center justify-content-center">
       <div class="col-lg-8 col-xl-7 col-xxl-6">
@@ -18,7 +18,7 @@
             <a class="btn btn-primary btn-lg px-4 me-sm-3" href="/products"
               >Buy Now</a
             >
-            <a class="btn btn-outline-light btn-lg px-4" href="#!"
+            <a class="btn btn-outline-light btn-lg px-4" href="/about"
               >Discover <b>More</b>
             </a>
           </div>
@@ -60,44 +60,62 @@
 </header>
 <section class="py-5" id="features">
   <div class="container px-5 my-5">
-    <h2 class="fw-bolder mb-0">Top danh mục</h2>
-    <br />
-    <div class="category">
-      <figure class="">
-        <img
-          src="https://bizweb.dktcdn.net/100/376/737/themes/894814/assets/banner_col_2.jpg?1676271560514"
-          alt="Mountains"
-        />
-        <figcaption># Trang sức</figcaption>
-      </figure>
-      <figure style="--c: #fff5">
-        <img
-          src="https://bizweb.dktcdn.net/100/376/737/themes/894814/assets/banner_col_1.jpg?1676271560514"
-          alt="Mountains"
-        />
-        <figcaption># Quần áo</figcaption>
-      </figure>
-      <figure>
-        <img
-          src="https://bizweb.dktcdn.net/100/376/737/themes/894814/assets/banner_col_3.jpg?1676271560514"
-          alt="Mountains"
-        />
-        <figcaption># Dày dép</figcaption>
-      </figure>
-      <figure style="--c: #fff5">
-        <img
-          class="nam"
-          src="https://cmsv2.yame.vn/uploads/9aff07e4-1bc8-4f51-84f5-94b28a2e5867/Banner_web_(990x1260)_01.jpg?quality=80&w=0&h=0"
-          alt="Mountains"
-        />
-        <figcaption># Nam</figcaption>
-      </figure>
+    <div class="row gx-5 justify-content-center">
+      <div class="col-lg-8 col-xl-6">
+        <div class="text-center">
+          <h1 class="fw-bolder">Top danh mục nổi bật</h1>
+          <p class="lead fw-normal text-muted mb-5">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque
+            fugit ratione dicta mollitia. Officiis ad.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="category row gx-5">
+      <a href="/products" class="col-lg-3 mb-5">
+        <figure class="">
+          <img
+            src="https://bizweb.dktcdn.net/100/376/737/themes/894814/assets/banner_col_2.jpg?1676271560514"
+            alt="Mountains"
+          />
+          <figcaption># Trang sức</figcaption>
+        </figure>
+      </a>
+      <a href="/products" class="col-lg-3 mb-5">
+        <figure style="--c: #fff5">
+          <img
+            src="https://bizweb.dktcdn.net/100/376/737/themes/894814/assets/banner_col_1.jpg?1676271560514"
+            alt="Mountains"
+          />
+          <figcaption># Quần áo</figcaption>
+        </figure>
+      </a>
+      <a href="/products" class="col-lg-3 mb-5">
+        <figure>
+          <img
+            src="https://bizweb.dktcdn.net/100/376/737/themes/894814/assets/banner_col_3.jpg?1676271560514"
+            alt="Mountains"
+          />
+          <figcaption># Dày dép</figcaption>
+        </figure>
+      </a>
+      <a href="/products" class="col-lg-3 mb-5">
+        <figure style="--c: #fff5">
+          <img
+            class="nam"
+            src="https://cmsv2.yame.vn/uploads/9aff07e4-1bc8-4f51-84f5-94b28a2e5867/Banner_web_(990x1260)_01.jpg?quality=80&w=0&h=0"
+            alt="Mountains"
+          />
+          <figcaption># Nam</figcaption>
+        </figure>
+      </a>
     </div>
   </div>
 </section>
 <!-- Testimonial section-->
 <div class="py-5 bg-light">
-  <h2 class="text-center">Bộ sưu tập mới nhất</h2>
+  <h1 class="text-center fw-bolder">Bộ sưu tập mới nhất</h1>
   <div class="container px-5 my-5">
     <div class="row gx-5 align-items-center">
       <div class="col-lg-4">
@@ -159,7 +177,7 @@
     <div class="row gx-5 justify-content-center">
       <div class="col-lg-8 col-xl-6">
         <div class="text-center">
-          <h2 class="fw-bolder">From our product</h2>
+          <h1 class="fw-bolder">From our product</h1>
           <p class="lead fw-normal text-muted mb-5">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque
             fugit ratione dicta mollitia. Officiis ad.
@@ -178,7 +196,7 @@
             <a
               class="text-decoration-none link-dark stretched-link"
               href="details/{{ item.id }}"
-              ><h5 class="card-title mb-3">{{ item.name }}</h5></a
+              ><h3 class="card-title mb-3 fw-bolder">{{ item.name }}</h3></a
             >
             <p><b>Giá: </b> {{ item.price }} đ</p>
             <p class="card-text mb-0">

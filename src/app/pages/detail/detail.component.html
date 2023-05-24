@@ -1,104 +1,147 @@
-<div class="container m-b-23">
+<div class="card-wrapper">
   <div class="card">
-    <div class="container-fliud">
-      <div class="wrapper row">
-        <div class="preview col-md-6">
-          <div class="preview-pic tab-content">
-            <div class="tab-pane active" id="pic-1">
-              <img src="{{ product?.image }}" />
-            </div>
-            <div class="tab-pane" id="pic-2">
-              <img src="http://placekitten.com/400/252" />
-            </div>
-            <div class="tab-pane" id="pic-3">
-              <img src="http://placekitten.com/400/252" />
-            </div>
-            <div class="tab-pane" id="pic-4">
-              <img src="http://placekitten.com/400/252" />
-            </div>
-            <div class="tab-pane" id="pic-5">
-              <img src="http://placekitten.com/400/252" />
-            </div>
-          </div>
-          <ul class="preview-thumbnail nav nav-tabs">
-            <li class="active">
-              <a data-target="#pic-1" data-toggle="tab"
-                ><img src="http://placekitten.com/200/126"
-              /></a>
-            </li>
-            <li>
-              <a data-target="#pic-2" data-toggle="tab"
-                ><img src="http://placekitten.com/200/126"
-              /></a>
-            </li>
-            <li>
-              <a data-target="#pic-3" data-toggle="tab"
-                ><img src="http://placekitten.com/200/126"
-              /></a>
-            </li>
-            <li>
-              <a data-target="#pic-4" data-toggle="tab"
-                ><img src="http://placekitten.com/200/126"
-              /></a>
-            </li>
-            <li>
-              <a data-target="#pic-5" data-toggle="tab"
-                ><img src="http://placekitten.com/200/126"
-              /></a>
-            </li>
-          </ul>
+    <!-- card left -->
+    <div class="product-imgs">
+      <div class="img-display">
+        <div class="img-showcase">
+          <img src="{{ product?.image }}" alt="shoe image" />
+          <img
+            src="https://i.pinimg.com/originals/7a/05/1c/7a051c1ff1001a1223c062722d5fcb0e.jpg"
+            alt="shoe image"
+          />
+          <img
+            src="https://i.pinimg.com/originals/83/02/08/83020812312a9b1c395120c71b3d797f.jpg"
+            alt="shoe image"
+          />
+          <img
+            src="https://i.pinimg.com/originals/43/40/44/4340443cf4540921e681fdbbcd07cce7.jpg"
+            alt="shoe image"
+          />
         </div>
-        <div class="details col-md-6">
-          <h3 class="product-title">{{ product?.name }}</h3>
-          <div class="rating">
-            <div class="stars">
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star"></span>
-              <span class="fa fa-star"></span>
-            </div>
-            <span class="review-no">41 reviews</span>
-          </div>
-          <p class="product-description">
-            {{ product?.description }}
-          </p>
-          <h4 class="price">
-            current price: <span>${{ product?.price }}</span>
-          </h4>
-          <p class="vote">
-            <strong>91%</strong> of buyers enjoyed this product!
-            <strong>(87 votes)</strong>
-          </p>
-          <h5 class="sizes">
-            sizes:
-            <span class="size" data-toggle="tooltip" title="small">s</span>
-            <span class="size" data-toggle="tooltip" title="medium">m</span>
-            <span class="size" data-toggle="tooltip" title="large">l</span>
-            <span class="size" data-toggle="tooltip" title="xtra large"
-              >xl</span
-            >
-          </h5>
-          <h5 class="colors">
-            colors:
-            <span
-              class="color orange not-available"
-              data-toggle="tooltip"
-              title="Not In store"
-            ></span>
-            <span class="color green"></span>
-            <span class="color blue"></span>
-          </h5>
-          <div class="action">
-            <button class="add-to-cart btn btn-default" type="button">
-              add to cart
-            </button>
-            <button class="like btn btn-default" type="button">
-              <span class="fa fa-heart"></span>
-            </button>
-          </div>
+      </div>
+      <div class="img-select">
+        <div class="img-item">
+          <a href="#" data-id="1">
+            <img
+              src="https://i.pinimg.com/originals/8d/3a/50/8d3a500548f68b2051a7adc825470fb5.jpg"
+              alt="shoe image"
+            />
+          </a>
         </div>
+        <div class="img-item">
+          <a href="#" data-id="2">
+            <img
+              src="https://i.pinimg.com/736x/92/71/18/92711873d52cac9b76370eee775d0f9c.jpg"
+              alt="shoe image"
+            />
+          </a>
+        </div>
+        <div class="img-item">
+          <a href="#" data-id="3">
+            <img
+              src="https://i.pinimg.com/236x/e8/b3/34/e8b33434de64772707057b40150b9d57.jpg"
+              alt="shoe image"
+            />
+          </a>
+        </div>
+        <div class="img-item">
+          <a href="#" data-id="4">
+            <img
+              src="https://i.pinimg.com/236x/e8/b3/34/e8b33434de64772707057b40150b9d57.jpg"
+              alt="shoe image"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- card right -->
+    <div class="product-content">
+      <h2 class="product-title">{{ product?.name }}</h2>
+      <a href="#" class="product-link">visit Minkiv store</a>
+      <div class="product-rating">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+        <span>4.7(21)</span>
+      </div>
+
+      <div class="product-price">
+        <p class="last-price">Old Price: <span>$257.00</span></p>
+        <p class="new-price">
+          New Price: <span>${{ product?.price }} (5%)</span>
+        </p>
+      </div>
+
+      <div class="product-detail">
+        <h2>about this item:</h2>
+        <p>{{ product?.description }}!</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur,
+          perferendis eius. Dignissimos, labore suscipit. Unde.
+        </p>
+        <ul>
+          <li>Color: <span>Black</span></li>
+          <li>Available: <span>in stock</span></li>
+          <li>Category: <span>#Quần áo</span></li>
+          <li>Shipping Area: <span>All over the world</span></li>
+          <li>Shipping Fee: <span>Free</span></li>
+        </ul>
+      </div>
+
+      <div class="purchase-info">
+        <input type="number" min="0" value="1" />
+        <button type="button" class="btn">
+          Add to Cart <i class="fas fa-shopping-cart"></i>
+        </button>
+        <button type="button" class="btn">Compare</button>
+      </div>
+
+      <div class="social-links">
+        <p>Share At:</p>
+        <a href="#">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-pinterest"></i>
+        </a>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+  const imgs = document.querySelectorAll(".img-select a");
+  const imgBtns = [...imgs];
+  let imgId = 1;
+
+  imgBtns.forEach((imgItem) => {
+    imgItem.addEventListener("click", (event) => {
+      event.preventDefault();
+      imgId = imgItem.dataset.id;
+      slideImage();
+    });
+  });
+
+  function slideImage() {
+    const displayWidth = document.querySelector(
+      ".img-showcase img:first-child"
+    ).clientWidth;
+
+    document.querySelector(".img-showcase").style.transform = `translateX(${
+      -(imgId - 1) * displayWidth
+    }px)`;
+  }
+
+  window.addEventListener("resize", slideImage);
+</script>
