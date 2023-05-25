@@ -13,7 +13,8 @@ import { ProductsComponent } from './pages/products/products.component';
 import { CardComponent } from './pages/card/card.component';
 
 import { AdminComponent } from './layouts/admin/admin.component';
-
+import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
+import { ProductmanagementComponent } from './pages/admin/productmanagement/productmanagement.component';
 
 const routes: Routes = [
   {
@@ -27,7 +28,6 @@ const routes: Routes = [
       { path: 'contact', component: ContactComponent },
       { path: 'products', component: ProductsComponent },
       { path: 'card', component: CardComponent },
-
     ],
   },
   {
@@ -39,28 +39,14 @@ const routes: Routes = [
         redirectTo: 'dashboard',
         pathMatch: 'full',
       },
-      // , {
-      //   path: 'dashboard',
-      //   loadChildren: () => import('./pages/dashboard/dashboard-default/dashboard-default.module').then(m => m.DashboardDefaultModule)
-      // }, {
-      //   path: 'basic',
-      //   loadChildren: () => import('./pages/ui-elements/basic/basic.module').then(m => m.BasicModule)
-      // }, {
-      //   path: 'notifications',
-      //   loadChildren: () => import('./pages/ui-elements/advance/notifications/notifications.module').then(m => m.NotificationsModule)
-      // }, {
-      //   path: 'bootstrap-table',
-      //   loadChildren: () => import('./pages/ui-elements/tables/bootstrap-table/basic-bootstrap/basic-bootstrap.module').then(m => m.BasicBootstrapModule),
-      // }, {
-      //   path: 'map',
-      //   loadChildren: () => import('./pages/map/google-map/google-map.module').then(m => m.GoogleMapModule),
-      // }, {
-      //   path: 'user',
-      //   loadChildren: () => import('./pages/user/profile/profile.module').then(m => m.ProfileModule)
-      // }, {
-      //   path: 'simple-page',
-      //   loadChildren: () => import('./pages/simple-page/simple-page.module').then(m => m.SimplePageModule)
-      // }
+      {
+        path: 'dashboard',
+        component: DashboardComponent,
+      },
+      {
+        path: 'product',
+        component: ProductmanagementComponent,
+      },
     ],
   },
   // {
@@ -82,4 +68,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

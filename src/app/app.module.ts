@@ -1,4 +1,7 @@
 import { NgModule } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { AppRoutingModule } from './app-routing.module';
@@ -21,7 +24,8 @@ import { ProductsComponent } from './pages/products/products.component';
 import { CardComponent } from './pages/card/card.component';
 
 import { AdminComponent } from './layouts/admin/admin.component';
-
+import { ProductmanagementComponent } from './pages/admin/productmanagement/productmanagement.component';
+import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +45,8 @@ import { AdminComponent } from './layouts/admin/admin.component';
     CardComponent,
 
     AdminComponent,
-
+    ProductmanagementComponent,
+    DashboardComponent,
   ],
 
   imports: [
@@ -49,6 +54,8 @@ import { AdminComponent } from './layouts/admin/admin.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSlideToggleModule,
+    MatTableModule,
+    MatPaginatorModule,
     FormsModule,
     HttpClientModule,
   ],
