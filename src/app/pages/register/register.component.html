@@ -15,6 +15,10 @@
     <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
       <form class="login100-form validate-form" (ngSubmit)="onSubmit()">
         <span class="login100-form-title p-b-49"> Register </span>
+        <div class="alert alert-primary" role="alert" *ngIf="alert !== ''">
+          A simple alert with <a href="#" class="alert-link">{{ alert }}</a
+          >. Give it a click if you like.
+        </div>
 
         <div
           class="wrap-input100 validate-input m-b-23"
@@ -32,6 +36,17 @@
           />
           <span class="focus-input100" data-symbol="&#xf206;"></span>
         </div>
+        <div class="alert alert-danger" *ngIf="errorMessage">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="alert"
+            aria-hidden="true"
+          >
+            &times;
+          </button>
+          <strong>Lỗi!</strong> {{ errorMessage }}
+        </div>
         <div
           class="wrap-input100 validate-input m-b-23"
           data-validate="Email is reauired"
@@ -48,7 +63,17 @@
           />
           <span class="focus-input100" data-symbol="&#xf206;"></span>
         </div>
-
+        <div class="alert alert-danger" *ngIf="errorMessage">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="alert"
+            aria-hidden="true"
+          >
+            &times;
+          </button>
+          <strong>Lỗi!</strong> {{ errorMessage }}
+        </div>
         <div
           class="wrap-input100 validate-input"
           data-validate="Password is required"
@@ -64,6 +89,44 @@
             placeholder="Type your password"
           />
           <span class="focus-input100" data-symbol="&#xf190;"></span>
+        </div>
+        <div class="alert alert-danger" *ngIf="errorMessage">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="alert"
+            aria-hidden="true"
+          >
+            &times;
+          </button>
+          <strong>Lỗi!</strong> {{ errorMessage }}
+        </div>
+        <div
+          class="wrap-input100 validate-input"
+          data-validate="Password is required"
+        >
+          <span class="label-input100">Confirm Password</span>
+          <input
+            class="input100"
+            type="password"
+            id="confirmPassword"
+            name="confirm"
+            [(ngModel)]="credentials.confirmPassword"
+            required
+            placeholder="Type Confirm password"
+          />
+          <span class="focus-input100" data-symbol="&#xf190;"></span>
+        </div>
+        <div class="alert alert-danger" *ngIf="errorMessage">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="alert"
+            aria-hidden="true"
+          >
+            &times;
+          </button>
+          <strong>Lỗi!</strong> {{ errorMessage }}
         </div>
 
         <div class="text-right p-t-8 p-b-31">

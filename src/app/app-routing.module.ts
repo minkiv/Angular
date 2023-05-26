@@ -15,6 +15,7 @@ import { CardComponent } from './pages/card/card.component';
 import { AdminComponent } from './layouts/admin/admin.component';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 import { ProductmanagementComponent } from './pages/admin/productmanagement/productmanagement.component';
+import { CategorymanagementComponent } from './pages/admin/categorymanagement/categorymanagement.component';
 
 const routes: Routes = [
   {
@@ -46,6 +47,10 @@ const routes: Routes = [
       {
         path: 'product',
         component: ProductmanagementComponent,
+      },
+      {
+        path: 'category',
+        component: CategorymanagementComponent,
       },
     ],
   },

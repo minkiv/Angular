@@ -26,6 +26,7 @@ import { CardComponent } from './pages/card/card.component';
 import { AdminComponent } from './layouts/admin/admin.component';
 import { ProductmanagementComponent } from './pages/admin/productmanagement/productmanagement.component';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
+import { CategorymanagementComponent } from './pages/admin/categorymanagement/categorymanagement.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { DashboardComponent } from './pages/admin/dashboard/dashboard.component'
     AdminComponent,
     ProductmanagementComponent,
     DashboardComponent,
+    CategorymanagementComponent,
   ],
 
   imports: [

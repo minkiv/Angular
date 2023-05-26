@@ -1,18 +1,18 @@
 import { Component, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
-import { Products } from 'src/common/products';
 import { OnInit } from '@angular/core';
 import { ApiService } from '../../../api.service';
+import { Categories } from 'src/common/categories';
 
 @Component({
-  selector: 'app-productmanagement',
-  templateUrl: './productmanagement.component.html',
-  styleUrls: ['./productmanagement.component.css'],
+  selector: 'app-categorymanagement',
+  templateUrl: './categorymanagement.component.html',
+  styleUrls: ['./categorymanagement.component.css'],
 })
-export class ProductmanagementComponent implements OnInit {
-  displayedColumns = ['id', 'name', 'price', 'description'];
-  dataSource = new MatTableDataSource<Products>();
+export class CategorymanagementComponent implements OnInit {
+  displayedColumns = ['id', 'name', 'action'];
+  dataSource = new MatTableDataSource<Categories>();
   index: number = 0;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
@@ -28,8 +28,10 @@ export class ProductmanagementComponent implements OnInit {
   constructor(private apiService: ApiService) {}
 
   ngOnInit() {
-    this.apiService.getItems().subscribe(
+    this.apiService.getCategories().subscribe(
       (data) => {
+        console.log(data);
+
         this.items = data;
         this.dataSource.data = this.items;
         console.log(this.items);
@@ -40,5 +42,3 @@ export class ProductmanagementComponent implements OnInit {
     );
   }
 }
-
-// const ELEMENT_DATA: Products[] = items;
