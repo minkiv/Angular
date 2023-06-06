@@ -9,15 +9,18 @@ import { DetailComponent } from './pages/detail/detail.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ClientLayoutComponent } from './layouts/client-layout/client-layout.component';
 import { ProductsComponent } from './pages/products/products.component';
-
 import { CardComponent } from './pages/card/card.component';
-
 import { AdminComponent } from './layouts/admin/admin.component';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 import { ProductmanagementComponent } from './pages/admin/productmanagement/productmanagement.component';
 import { CategorymanagementComponent } from './pages/admin/categorymanagement/categorymanagement.component';
+import { AuthGuardService } from './services/auth-guard.service';
+import { RoleGuardService } from './services/role-guard.service';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { ProductCreateComponent } from './pages/admin/product-create/product-create.component';
+import { ProductUpdateComponent } from './pages/admin/product-update/product-update.component';
 
-const routes: Routes = [
+export const ROUTES: Routes = [
   {
     path: '',
     component: ClientLayoutComponent,
@@ -34,6 +37,10 @@ const routes: Routes = [
   {
     path: 'admin',
     component: AdminComponent,
+    // canActivate: [RoleGuardService],
+    data: {
+      expectedRole: 'admin',
+    },
     children: [
       {
         path: 'admin',
@@ -52,6 +59,14 @@ const routes: Routes = [
         path: 'category',
         component: CategorymanagementComponent,
       },
+      {
+        path: 'product/add',
+        component: ProductCreateComponent,
+      },
+      {
+        path: 'product/:id/update',
+        component: ProductUpdateComponent,
+      },
     ],
   },
   // {
@@ -64,13 +79,19 @@ const routes: Routes = [
   //     }
   //   ]
   // },
+  {
+    path: 'profile',
+    canActivate: [AuthGuardService],
+    component: ProfileComponent,
+  },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: '**', component: NotFoundPageComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(ROUTES)],
   exports: [RouterModule],
+  // providers: [AuthGuardService, RoleGuardService],
 })
 export class AppRoutingModule {}

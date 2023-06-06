@@ -38,7 +38,7 @@ export class RegisterComponent {
           this.alert = response.message;
           localStorage.setItem('Token', response.accessToken);
           alert('Đăng Ký thành công');
-          this.router.navigateByUrl('/home');
+          this.router.navigateByUrl('/login');
         },
         (error) => {
           // Xử lý error nếu có

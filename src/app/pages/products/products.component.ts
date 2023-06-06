@@ -6,12 +6,11 @@ import { ApiService } from '../../api.service';
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css'],
 })
-export class ProductsComponent implements OnInit {
+export class ProductsComponent {
   items: any[] = [];
+  categories: any[] = [];
 
-  constructor(private apiService: ApiService) {}
-
-  ngOnInit() {
+  constructor(private apiService: ApiService) {
     this.apiService.getItems().subscribe(
       (data) => {
         this.items = data;
@@ -21,19 +20,31 @@ export class ProductsComponent implements OnInit {
         console.error(error);
       }
     );
+    this.apiService.getCategories().subscribe(
+      (data) => {
+        this.categories = data;
+        console.log(this.categories);
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
+  }
+  getAllProducts() {
+    this.apiService.getItems().subscribe((data) => {
+      this.items = data;
+    });
   }
   sortProductsByPrice() {
     this.apiService.getItems().subscribe((data) => {
       this.items = data;
       this.items.sort((a, b) => b.price - a.price);
-      console.log(this.items);
     });
   }
   sortProductsByPriceAsc() {
     this.apiService.getItems().subscribe((data) => {
       this.items = data;
       this.items.sort((a, b) => a.price - b.price);
-      console.log(this.items);
     });
   }
 }

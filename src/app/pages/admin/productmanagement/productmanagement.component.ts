@@ -4,6 +4,7 @@ import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { Products } from 'src/common/products';
 import { OnInit } from '@angular/core';
 import { ApiService } from '../../../api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-productmanagement',
@@ -11,7 +12,14 @@ import { ApiService } from '../../../api.service';
   styleUrls: ['./productmanagement.component.css'],
 })
 export class ProductmanagementComponent implements OnInit {
-  displayedColumns = ['id', 'name', 'price', 'description'];
+  displayedColumns = [
+    'id',
+    'name',
+    'price',
+    'quantity',
+    'description',
+    'action',
+  ];
   dataSource = new MatTableDataSource<Products>();
   index: number = 0;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -25,14 +33,27 @@ export class ProductmanagementComponent implements OnInit {
   }
   items: any[] = [];
 
-  constructor(private apiService: ApiService) {}
+  constructor(private apiService: ApiService, private router: Router) {}
 
   ngOnInit() {
     this.apiService.getItems().subscribe(
       (data) => {
         this.items = data;
         this.dataSource.data = this.items;
-        console.log(this.items);
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
+  }
+  deleteProduct(id: string) {
+    console.log(id);
+
+    this.apiService.deleteProduct(id).subscribe(
+      (data) => {
+        console.log(data);
+        alert('Xóa thành công');
+        this.router.navigateByUrl('/admin/product');
       },
       (error) => {
         console.error(error);

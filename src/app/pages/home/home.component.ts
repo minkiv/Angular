@@ -8,12 +8,11 @@ import { User } from 'src/common/user';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
   items: any[] = [];
+  categories: any[] = [];
 
-  constructor(private apiService: ApiService) {}
-
-  ngOnInit() {
+  constructor(private apiService: ApiService) {
     this.apiService.getItems().subscribe(
       (data) => {
         this.items = data;
