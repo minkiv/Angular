@@ -1,0 +1,66 @@
+<form
+  class="example-form"
+  [formGroup]="productForm"
+  (ngSubmit)="onHandleSubmit()"
+>
+  <h1>Upadate Product</h1>
+  <!-- <input type="text"  /> -->
+  <!-- <input type="number" formControlName="price" /> -->
+  <!-- <input type="number" formControlName="quantity" /> -->
+  <input type="file" formControlName="image" id="image" />
+  <!-- <input type="text"  /> -->
+  <mat-form-field class="example-full-width">
+    <mat-label>Product Name</mat-label>
+    <input
+      matInput
+      placeholder="Ex. Pizza"
+      value="Sushi"
+      formControlName="name"
+    />
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Product Price</mat-label>
+    <input
+      matInput
+      type="number"
+      class="example-right-align"
+      placeholder="0"
+      formControlName="price"
+    />
+    <span matTextPrefix>$&nbsp;</span>
+    <span matTextSuffix>.00</span>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Product quantity</mat-label>
+    <input
+      matInput
+      placeholder="Ex. 12"
+      value="12"
+      formControlName="quantity"
+    />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select requiredm (selectionChange)="onSelectionChange($event)">
+      <mat-option>-- None --</mat-option>
+      <mat-option
+        *ngFor="let category of categories"
+        value="{{ category._id }}"
+        >{{ category.name }}</mat-option
+      >
+    </mat-select>
+    <mat-label
+      ><mat-icon>Category</mat-icon> <strong> Category</strong>
+      <em> select</em></mat-label
+    >
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Product description</mat-label>
+    <textarea
+      matInput
+      placeholder="Ex. It makes me feel..."
+      formControlName="description"
+    ></textarea>
+  </mat-form-field>
+  <button type="submit" [disabled]="!productForm.valid">Cập nhật</button>
+</form>
