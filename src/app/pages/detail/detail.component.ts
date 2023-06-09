@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Products } from '../../../common/products';
 import { ProductService } from '../../product.service';
 import { ApiService } from '../../api.service';
+import { Categories } from 'src/common/categories';
 
 @Component({
   selector: 'app-detail',
@@ -12,6 +13,7 @@ import { ApiService } from '../../api.service';
 })
 export class DetailComponent implements OnInit {
   product: Products | undefined;
+  category: Categories | undefined;
   items: any[] = [];
   constructor(
     private route: ActivatedRoute,
@@ -25,6 +27,7 @@ export class DetailComponent implements OnInit {
     this.apiService.getItems().subscribe((data) => {
       this.items = data;
       this.product = this.items.find((product) => product._id === productId);
+      // this.category= this.product?.categoryId.name
       console.log(this.product);
     });
     // this.product = this.productService.getProduct(productId);

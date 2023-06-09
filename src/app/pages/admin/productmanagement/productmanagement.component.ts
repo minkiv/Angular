@@ -53,12 +53,12 @@ export class ProductmanagementComponent implements OnInit {
       (data) => {
         console.log(data);
         alert('Xóa thành công');
-        this.router.navigateByUrl('/admin/product');
       },
       (error) => {
         console.error(error);
       }
     );
+    this.router.navigateByUrl('/admin/product');
   }
 }
 

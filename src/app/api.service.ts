@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Products, createProduct } from 'src/common/products';
 import { Categories } from 'src/common/categories';
+import { IUser, Role } from 'src/common/user';
 
 @Injectable({
   providedIn: 'root',
@@ -51,9 +52,9 @@ export class ApiService {
     const url = `${this.apiUrl}/categories`;
     return this.http.get<any[]>(url);
   }
-  getCategoryById(id: string): Observable<any[]> {
+  getCategoryById(id: string): Observable<Categories> {
     const url = `${this.apiUrl}/categories/${id}`;
-    return this.http.get<any[]>(url);
+    return this.http.get<Categories>(url);
   }
   createCategory(category: Categories): Observable<Categories> {
     const url = `${this.apiUrl}/categories`;
@@ -67,4 +68,12 @@ export class ApiService {
     const url = `${this.apiUrl}/categories/${id}`;
     return this.http.delete<Categories>(url);
   }
+  getAuth(id: string): Observable<IUser> {
+    const url = `${this.apiUrl}/checkAuth`;
+    return this.http.post<IUser>(url, id);
+  }
+  // searchProducts(searchTerm:any): Observable<IUser> {
+  //   const url = `${this.apiUrl}/checkAuth`;
+  //   return this.http.post<IUser>(url, id);
+  // }
 }

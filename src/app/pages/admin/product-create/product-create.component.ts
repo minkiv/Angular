@@ -39,7 +39,9 @@ export class ProductCreateComponent {
     image: [''],
     description: [''],
   });
-  categories: Categories[] = [{ _id: '1', name: 'Quần áo', image: '...' }];
+  categories: Categories[] = [
+    { _id: '1', name: 'Quần áo', image: '...', products: [] },
+  ];
   constructor(
     private formBuilder: UntypedFormBuilder,
     private productService: ProductService,

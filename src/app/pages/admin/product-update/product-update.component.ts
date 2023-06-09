@@ -42,7 +42,9 @@ export class ProductUpdateComponent {
     description: [''],
   });
   product!: Products;
-  categories: Categories[] = [{ _id: '1', name: 'Quần áo', image: '...' }];
+  categories: Categories[] = [
+    { _id: '1', name: 'Quần áo', image: '...', products: [] },
+  ];
   selectedValue: string = '';
   constructor(
     private formBuilder: UntypedFormBuilder,

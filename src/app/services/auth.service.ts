@@ -46,17 +46,53 @@
 //     return this.isLoggedIn;
 //   }
 // }
+
 import { Injectable } from '@angular/core';
-import { JwtHelperService } from '@auth0/angular-jwt';
-@Injectable()
+// import { JwtHelperService } from '@auth0/angular-jwt';
+
+@Injectable({
+  providedIn: 'root',
+})
 export class AuthService {
-  constructor(public jwtHelper: JwtHelperService) {}
+  permit = true;
+  constructor() {}
   // ...
   public isAuthenticated(): boolean {
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem('Token');
     // Check whether the token is expired and return
     // true or false
-    console.log(this.jwtHelper.isTokenExpired(token)); 
-    return !this.jwtHelper.isTokenExpired(token);
+    console.log(token);
+
+    return !token ? false : true;
   }
 }
+
+// export class AuthService {
+//   url='http://127.0.0.1:3000/auth/';
+//   tocken:string=null;
+//   constructor(private http:HttpClient) {}
+//   setTocken(tocken:string){
+//   this.tocken=tocken;
+//   }
+//   getTocken(){
+//   return this.tocken;
+//   }
+//   signUp(email:string,pass:string){
+//   return this.http.post(this.url+'register',
+//   {
+//   "email": email,
+//   "password": pass,
+//   "typeUser":0
+//   }
+//   );
+//   }
+//   signIn(email:string,pass:string){
+//   return this.http.post(this.url+'login',
+//   {
+//   "email": email,
+//   "password": pass,
+//   "typeUser":0
+//   }
+//   );
+//   }
+//  }

@@ -26,13 +26,7 @@ import { ProductmanagementComponent } from './pages/admin/productmanagement/prod
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 import { CategorymanagementComponent } from './pages/admin/categorymanagement/categorymanagement.component';
 import { ProfileComponent } from './pages/profile/profile.component';
-import { AuthGuardService } from './services/auth-guard.service';
-import { RoleGuardService } from './services/role-guard.service';
-import { AuthService } from './services/auth.service';
-import { JwtHelperService } from '@auth0/angular-jwt';
-import { JwtModule, JWT_OPTIONS } from '@auth0/angular-jwt';
-import { ProductCreateComponent } from './pages/admin/product-create/product-create.component';
-import { ProductUpdateComponent } from './pages/admin/product-update/product-update.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -54,8 +48,6 @@ import { ProductUpdateComponent } from './pages/admin/product-update/product-upd
     DashboardComponent,
     CategorymanagementComponent,
     ProfileComponent,
-    // ProductUpdateComponent,
-    // ProductCreateComponent,
   ],
 
   imports: [
@@ -67,21 +59,9 @@ import { ProductUpdateComponent } from './pages/admin/product-update/product-upd
     MatPaginatorModule,
     FormsModule,
     HttpClientModule,
-    // JwtModule.forRoot({
-    //   // Cung cấp các tùy chọn cho JWT
-    //   jwtOptionsProvider: {
-    //     provide: JWT_OPTIONS,
-    //     useFactory:  AuthService,
-    //     deps: [], // Các dependency khác nếu cần
-    //   },
-    // }),
+    NgxPaginationModule,
   ],
-  providers: [
-    // AuthGuardService,
-    // RoleGuardService,
-    // AuthService,
-    // JwtHelperService,
-  ],
+  providers: [],
 
   // providers: [],
   bootstrap: [AppComponent],

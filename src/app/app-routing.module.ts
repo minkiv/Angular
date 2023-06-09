@@ -37,7 +37,7 @@ export const ROUTES: Routes = [
   {
     path: 'admin',
     component: AdminComponent,
-    // canActivate: [RoleGuardService],
+    canActivate: [RoleGuardService],
     data: {
       expectedRole: 'admin',
     },
@@ -92,6 +92,6 @@ export const ROUTES: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(ROUTES)],
   exports: [RouterModule],
-  // providers: [AuthGuardService, RoleGuardService],
+  providers: [AuthGuardService],
 })
 export class AppRoutingModule {}

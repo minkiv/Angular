@@ -7,11 +7,23 @@ p {
 a {
   text-decoration: none !important;
 }
-
+.btn-cate {
+  margin-right: 4px;
+}
+.search {
+  /* margin-left: 10px; */
+  text-align: right;
+}
 .copyright-text {
   text-transform: uppercase;
 }
-
+.select {
+  height: 40px;
+  border-radius: 5px;
+}
+.select option {
+  line-height: 20px;
+}
 .main-button a {
   background-color: #3a8bcd;
   border-radius: 5px;

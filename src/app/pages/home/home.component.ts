@@ -16,7 +16,16 @@ export class HomeComponent {
     this.apiService.getItems().subscribe(
       (data) => {
         this.items = data;
-        console.log(this.items);
+        // console.log(this.items);
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
+    this.apiService.getCategories().subscribe(
+      (data) => {
+        this.categories = data;
+        // console.log(this.items);
       },
       (error) => {
         console.error(error);

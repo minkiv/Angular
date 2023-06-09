@@ -8,7 +8,7 @@
     <div class="product-imgs">
       <div class="img-display">
         <div class="img-showcase">
-          <img src="{{ product?.image }}" alt="shoe image" />
+          <img src="{{ product?.images }}" alt="shoe image" />
           <img
             src="https://i.pinimg.com/originals/7a/05/1c/7a051c1ff1001a1223c062722d5fcb0e.jpg"
             alt="shoe image"
@@ -88,7 +88,9 @@
         <ul>
           <li>Color: <span>Black</span></li>
           <li>Available: <span>in stock</span></li>
-          <li>Category: <span>#Quần áo</span></li>
+          <li>
+            Category: <span>#{{ product?.categoryId?.name }}</span>
+          </li>
           <li>Shipping Area: <span>All over the world</span></li>
           <li>Shipping Fee: <span>Free</span></li>
         </ul>

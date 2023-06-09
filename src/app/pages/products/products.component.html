@@ -12,7 +12,9 @@
           <button class="btn btn-primary" (click)="getAllProducts()">
             All Products
           </button>
-          <button class="btn btn-primary" data-filter=".new">Newest</button>
+          <button class="btn btn-primary" (click)="sortProductsByNewest()">
+            Newest
+          </button>
           <button class="btn btn-primary" (click)="sortProductsByPrice()">
             Low Price
           </button>
@@ -22,16 +24,56 @@
         </div>
       </div>
     </div>
+    <div class="row">
+      <select
+        class="col-md-4 col-sm-12 select"
+        [(ngModel)]="selectedCategory"
+        (change)="getProByCat(selectedCategory)"
+      >
+        <option value="" selected>-- None --</option>
+        <option *ngFor="let category of categories" [value]="category._id">
+          {{ category.name }}
+        </option>
+      </select>
+      <section class="col-md-8 col-sm-12 search">
+        <input
+          type="text"
+          class="select"
+          [(ngModel)]="searchTerm"
+          placeholder="Search"
+        />
+        <button
+          class="btn btn-primary ms-xl-4"
+          (click)="searchProducts(searchTerm)"
+        >
+          Search
+        </button>
+      </section>
+    </div>
   </div>
 </div>
+
 <div class="featured container no-gutter">
   <div class="row posts">
-    <div id="{{ pro._id }}" class="item new col-md-4" *ngFor="let pro of items">
+    <div
+      id="{{ pro._id }}"
+      class="item new col-md-4"
+      *ngFor="
+        let pro of items
+          | paginate
+            : {
+                itemsPerPage: pageSize,
+                currentPage: currentPage,
+                totalItems: count
+              }
+      "
+    >
       <a href="details/{{ pro._id }}">
         <div class="featured-item">
-          <img src="{{ pro.image }}" alt="" />
+          <img src="{{ pro.images }}" alt="" />
           <h4>{{ pro.name }}</h4>
-          <h6>đ{{ pro.price }}</h6>
+          <h6>Giá : ${{ pro.price }}</h6>
+          <!-- <h4>{{ pro.description }}</h4> -->
         </div>
       </a>
     </div>
@@ -41,15 +83,12 @@
 <div class="page-navigation">
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
-        <ul>
-          <li class="current-page"><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li>
-            <a href="#"><i class="fa fa-angle-right"></i></a>
-          </li>
-        </ul>
+      <div class="col-md-12 text-center">
+        <pagination-controls
+          previousLabel="Prev"
+          nextLabel="Next"
+          (pageChange)="onPageChange($event)"
+        ></pagination-controls>
       </div>
     </div>
   </div>
